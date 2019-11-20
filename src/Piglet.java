@@ -10,12 +10,14 @@ public class Piglet {
             if (dice != 1) {
                 score += dice;
                 System.out.print("You rolled a " + dice + "\nRoll again?");
+                if (scan.next().equals("no")) {
+                    System.out.println("You got " + score + " points");
+                    break;
+                }
             }
-            if (scan.next().equals("no")) {
-                System.out.println("You got " + score + " points");
-            }
-            else if (dice == 1) {
-                System.out.print("You got 0 points!");
+
+            if (dice == 1) {
+                System.out.print("You rolled 1!\nYou got 0 points!");
                 break;
             }
 
