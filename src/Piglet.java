@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Piglet {
     public static void Rolldice() {
         int dice = 0;
@@ -15,12 +14,10 @@ public class Piglet {
                     break;
                 }
             }
-
             if (dice == 1) {
                 System.out.print("You rolled 1!\nYou got 0 points!");
                 break;
             }
-
         }
     }
 
