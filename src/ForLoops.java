@@ -47,7 +47,6 @@ public class ForLoops {
          }
          return total;
      }
-
     public static void main(String[]args){
         System.out.println(printingHashTags(7));
         System.out.println(countDown(0,10));
