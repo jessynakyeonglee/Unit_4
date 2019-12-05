@@ -10,11 +10,44 @@ public class NestedLoops {
         return output;
     }
     public static String xSquare2(int n){
-
+        String output = "";
+        for (int x=1; x<=n; x++){
+            for (int y=1; y<=n; y++)
+                output+="X";
+            output+="\n";
+        }
+        return output;
     }
+    public static String flippedTriangle(int n){
+        String output = "";
+        for (int x=1; x<=n; x++){
+            for (int y=x; y<=n; y++)
+                output+="*";
+                output+="\n";
+        }
+        return output;
+    }
+    public static String multiplicationTable(){
+        String output ="";
+        String withspace = "";
+        for (int x=1; x<=9; x++){
+            for (int y=1; y<=9; y++)
+            if ((x*y)/10>1) {
+                withspace += x * y + "  ";
+            }
+            else
+                withspace += x * y + "   ";
 
+            output+=withspace;
+                output+="\n";
+        }
+        return output;
+    }
         public static void main (String[]args){
-        System.out.println(xSquare(5));
+        //System.out.print(xSquare(5));
+        //System.out.print(xSquare2(8));
+        // System.out.print(flippedTriangle(6));
+        System.out.print(multiplicationTable());
         }
 }
 
