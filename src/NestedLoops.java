@@ -29,24 +29,21 @@ public class NestedLoops {
     }
     public static String multiplicationTable(){
         String output ="";
-        String withspace = "";
         for (int x=1; x<=9; x++){
             for (int y=1; y<=9; y++)
-            if ((x*y)/10>1) {
-                withspace += x * y + "  ";
-            }
-            else
-                withspace += x * y + "   ";
-
-            output+=withspace;
+                if ((x*y)>=10){
+                    output+=" "+x*y;
+                }
+                else
+                    output+="  "+x*y;
                 output+="\n";
         }
         return output;
     }
         public static void main (String[]args){
-        //System.out.print(xSquare(5));
-        //System.out.print(xSquare2(8));
-        // System.out.print(flippedTriangle(6));
+        System.out.print(xSquare(5));
+        System.out.print(xSquare2(8));
+        System.out.print(flippedTriangle(6));
         System.out.print(multiplicationTable());
         }
 }
