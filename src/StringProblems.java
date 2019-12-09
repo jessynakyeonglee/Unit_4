@@ -57,15 +57,23 @@ public class StringProblems {
         return s1+" and "+s2+" are not the same. They differ at "+(counter+1)+".";
     }
 
-    public static boolean isPalindrome(String s){
-        s=s.toLowerCase();
-        return true;
+    public static boolean isPalindrome(String S) {
+        String s = S.toLowerCase();
+        String flipped = "";
+        for (int counter = S.length() - 1; counter >= 0; counter--) {
+            flipped += s.substring(counter, counter + 1);
+        }
+        if (s.equals(flipped)) {
+            return true;
+        } else {
+            return false;
+        }
     }
-
     public static void main (String[]args){
         System.out.println(printTheLetters("Pizza"));
         System.out.println(everyOtherLetter("Computer Science"));
         System.out.println(countTheVowels("COMPUTER science"));
         System.out.println(differentStrings("bowl","bowling"));
+        System.out.println(isPalindrome("radar"));
     }
 }
