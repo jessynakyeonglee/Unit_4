@@ -1,17 +1,17 @@
 public class FizzBuzz {
     public static String FizzBuzz(int num){
         String output ="";
-        for (int counter=0; counter<=num; counter++){
-            if (counter%3==0){
+        for (int counter=1; counter<=num; counter++){
+            if (counter%20==0){
+                output+=" "+"Buzz"+"\n";
+            }
+            else if (counter%3==0){
                 output+=" Fizz";
-
             }
             else if (counter%5==0){
                 output+=" Buzz";
             }
-            else if (counter%20==0){
-                output+=" "+counter+"\n";
-            }
+
             else
                 output+=" "+counter;
         }
